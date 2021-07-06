@@ -1,0 +1,150 @@
+body {
+    font-family: arial;
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    text-align: right;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.nav a {
+    padding: 8px 20px;
+    background-color: #ccc;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #000;
+}
+
+.container {
+    width: 980px;
+    margin: 0 auto;
+}
+
+.search {
+    width: 100%;
+    text-align: center;
+    margin: 50px 0 20px;
+}
+
+.search .input {
+    height: 30px;
+    width: 30%;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    padding: 0 10px;
+}
+
+.search select {
+    height: 32px;
+    border: 1px solid #ccc;
+    padding: 0 10px;
+    border-radius: 20px;
+}
+
+.search .btn-search {
+    border: none;
+    height: 32px;
+    border-radius: 20px;
+    padding: 0 20px;
+    font-size: 16px;
+}
+
+.input {
+    height: 30px;
+    width: 90%;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    padding: 0 10px;
+}
+
+.input-area {
+    width: 98%;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    padding: 0 10px;
+}
+
+.btn {
+    border: none;
+    height: 32px;
+    border-radius: 20px;
+    padding: 0 20px;
+    font-size: 16px;
+}
+
+.category {
+    text-align: center;
+}
+
+.category a {
+    padding: 8px 20px;
+    background-color: #ccc;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 20px 10px;
+    text-decoration: none;
+    color: #000;
+}
+
+.category a:hover {
+    color: blue;
+}
+
+.remove-all {
+    padding: 8px 20px;
+    background-color: #ccc;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 20px 0;
+    text-decoration: none;
+    color: #000;
+    float: right;
+}
+
+.checkout {
+    padding: 8px 20px;
+    background-color: #ccc;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 20px 0 20px 10px;
+    text-decoration: none;
+    color: #000;
+    float: right;
+}
+
+table, th, td {
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px 12px;
+}
+
+.checkout-info table,
+.checkout-info th,
+.checkout-info td {
+    border: none;
+}
+
+img {
+    width: 60px;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.img-detail {
+    margin: 10px;
+    display: inline-block;
+}
+
+.img-detail img {
+    width: 150px;
+}
