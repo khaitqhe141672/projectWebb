@@ -74,7 +74,7 @@ public class ProductServlet extends HttpServlet {
             request.getRequestDispatcher("index.jsp").forward(request, response);// cau lenh day du lieu ve trang index.jsp
 
         } catch (IOException | ServletException ex) {
-
+                response.sendRedirect("error.jsp");
         }
     }
 

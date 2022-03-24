@@ -16,7 +16,6 @@ import Entity.Material;
 import Entity.Product;
 import Entity.Size;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

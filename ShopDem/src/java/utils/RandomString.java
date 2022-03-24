@@ -39,9 +39,9 @@ public class RandomString {
     }
 
     public static void main(String[] args) {
-        RandomString ramdomNumber = new RandomString();
-        System.out.println(ramdomNumber.generateRandomString());
-        // System.out.println(ramdomEmail.generateRandomString()+"@sangbui.com");
+        double a = 7;
+        double b = 2;
+        System.out.println(a/b);
     }
 
 }

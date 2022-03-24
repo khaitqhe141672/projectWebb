@@ -34,5 +34,5 @@ public class Product implements Serializable{
     private String imgName;
     private String note;
     private int status;
-    
+    private int sales;
 }

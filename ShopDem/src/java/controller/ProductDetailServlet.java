@@ -5,13 +5,9 @@
  */
 package controller;
 
-import Dao.ImagesDao;
 import Dao.ProductDao;
-import Entity.Images;
 import Entity.Product;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;

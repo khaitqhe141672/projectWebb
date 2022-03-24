@@ -9,7 +9,6 @@ import Dao.ProductDao;
 import Entity.Cart;
 import Entity.Product;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

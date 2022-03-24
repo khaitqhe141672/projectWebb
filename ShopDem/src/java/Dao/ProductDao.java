@@ -43,6 +43,7 @@ public class ProductDao implements IMethod<Product> {
                         .description(rs.getString(10))
                         .note(rs.getString(12))
                         .status(rs.getInt(13))
+                        .sales(rs.getInt(14))
                         .build();
                 ls.add(p);
 
@@ -79,6 +80,7 @@ public class ProductDao implements IMethod<Product> {
                         .description(rs.getString(10))
                         .note(rs.getString(12))
                         .status(rs.getInt(13))
+                        .sales(rs.getInt(14))
                         .build();
                 return p;
             }
@@ -86,14 +88,12 @@ public class ProductDao implements IMethod<Product> {
         } catch (SQLException ex) {
             ex.printStackTrace();//sai j thi no se bao loi
         }
-
         return null;
-
     }
 
     @Override
     public boolean add(Product obj) {
-        String query = "Insert into Product Values(?,?,?,?,?,?,?,?,?,?,?,?)";
+        String query = "Insert into Product Values(?,?,?,?,?,?,?,?,?,?,?,?,?)";
         int check = 0;
         try (Connection con = SQLServerConnection.getConnection();//mk se ket noi vs databse ben SQL
                 PreparedStatement ps = con.prepareStatement(query)) {
@@ -109,6 +109,7 @@ public class ProductDao implements IMethod<Product> {
             ps.setObject(10, obj.getDescription());
             ps.setObject(11, obj.getNote());
             ps.setObject(12, obj.getStatus());
+            ps.setObject(13, obj.getSales());
             check = ps.executeUpdate();
         } catch (SQLException ex) {
             ex.printStackTrace();//sai j thi no se bao loi
@@ -130,7 +131,7 @@ public class ProductDao implements IMethod<Product> {
                 + "Image= ?,"
                 + "Description= ?,"
                 + "Note= ?,"
-                + "Status= ? WHERE ID = ?";
+                + "Status= ?, Sales= ? WHERE ID = ?";
         int check = 0;
         try (Connection con = SQLServerConnection.getConnection();//mk se ket noi vs databse ben SQL
                 PreparedStatement ps = con.prepareStatement(query)) {
@@ -147,6 +148,7 @@ public class ProductDao implements IMethod<Product> {
             ps.setObject(10, obj.getDescription());
             ps.setObject(11, obj.getNote());
             ps.setObject(12, obj.getStatus());
+            ps.setObject(13, obj.getSales());
             check = ps.executeUpdate();
         } catch (SQLException ex) {
             ex.printStackTrace();//sai j thi no se bao loi
@@ -192,6 +194,7 @@ public class ProductDao implements IMethod<Product> {
                         .description(rs.getString(10))
                         .note(rs.getString(12))
                         .status(rs.getInt(13))
+                        .sales(rs.getInt(14))
                         .build();
                 ls.add(p);
 
@@ -229,6 +232,7 @@ public class ProductDao implements IMethod<Product> {
                         .description(rs.getString(10))
                         .note(rs.getString(12))
                         .status(rs.getInt(13))
+                        .sales(rs.getInt(14))
                         .build();
                 ls.add(p);
 
@@ -266,6 +270,7 @@ public class ProductDao implements IMethod<Product> {
                         .description(rs.getString(10))
                         .note(rs.getString(12))
                         .status(rs.getInt(13))
+                        .sales(rs.getInt(14))
                         .build();
                 ls.add(p);
 
@@ -303,6 +308,7 @@ public class ProductDao implements IMethod<Product> {
                         .description(rs.getString(10))
                         .note(rs.getString(12))
                         .status(rs.getInt(13))
+                        .sales(rs.getInt(14))
                         .build();
                 ls.add(p);
 
@@ -340,6 +346,7 @@ public class ProductDao implements IMethod<Product> {
                         .description(rs.getString(10))
                         .note(rs.getString(12))
                         .status(rs.getInt(13))
+                        .sales(rs.getInt(14))
                         .build();
                 ls.add(p);
 
@@ -379,6 +386,7 @@ public class ProductDao implements IMethod<Product> {
                         .description(rs.getString(10))
                         .note(rs.getString(12))
                         .status(rs.getInt(13))
+                        .sales(rs.getInt(14))
                         .build();
                 ls.add(p);
 
@@ -429,6 +437,7 @@ public class ProductDao implements IMethod<Product> {
                         .description(rs.getString(10))
                         .note(rs.getString(12))
                         .status(rs.getInt(13))
+                        .sales(rs.getInt(14))
                         .build();
                 ls.add(p);
 
@@ -448,6 +457,20 @@ public class ProductDao implements IMethod<Product> {
         try (Connection con = SQLServerConnection.getConnection();//mk se ket noi vs databse ben SQL
                 PreparedStatement ps = con.prepareStatement(query)) {
             ps.setObject(1, quantity);
+            ps.setObject(2, id);
+            check = ps.executeUpdate();
+        } catch (SQLException ex) {
+            ex.printStackTrace();//sai j thi no se bao loi
+        }
+        return check > 0;
+    }
+    
+        public boolean updateSales(int id, int sale) {
+        String query = "UPDATE Product set Sales= ? WHERE ID = ?";
+        int check = 0;
+        try (Connection con = SQLServerConnection.getConnection();//mk se ket noi vs databse ben SQL
+                PreparedStatement ps = con.prepareStatement(query)) {
+            ps.setObject(1, sale);
             ps.setObject(2, id);
             check = ps.executeUpdate();
         } catch (SQLException ex) {
@@ -487,6 +510,7 @@ public class ProductDao implements IMethod<Product> {
                         .description(rs.getString(10))
                         .note(rs.getString(12))
                         .status(rs.getInt(13))
+                        .sales(rs.getInt(14))
                         .build();
                 ls.add(p);
             }
